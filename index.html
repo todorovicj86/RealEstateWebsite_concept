@@ -1,0 +1,915 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Load stylesheet for this website-->
+		<link type="text/css" rel="stylesheet" href="RealEstateCSS.css">
+		
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<!-- Load social meadia icons-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+		
+		
+		<title>RealEstateWeb</title>
+				
+	</head>
+	
+	<body>
+<!--------------------------------------------------------------------------------------------------------------------------------->
+	
+		<!-------------------------------------------------------------------->
+				                   <!--TOP NAVBAR-->
+		<!-------------------------------------------------------------------->
+		
+		<!--Top Nav container - logo + navigation menu + login and sign in buttons/forms-->
+		<div class="elements" id="TopNav_container">
+			
+			<!--Define the top menu to be centered-->
+			<div class="menu" id="TopNavbar">
+				
+				<!--Adding navigation part-->
+				<nav id="TopNav">
+					<a id="logo" href="#">REWeb</a>
+					<a class="active menuItem" href="RealEstate.html" id="home">Home</a>
+					<a class="menuItem" href="RealEstate_about.html" id="about">About</a>
+					<a class="menuItem" href="RealEstate_rent.html" id="rent">Rent</a>
+					<a class="menuItem" href="RealEstate_buy.html" id="buy">Buy</a>
+					<a class="menuItem" href="RealEstate_advert.html" id="advert">Advertise</a>
+					<a class="menuItem" href="RealEstate_contact.html" id="contact">Contact</a>
+					
+					<!--Adding buttons for the action Log In and Sign In-->
+					<a id="buttons">
+						<button id="signin" type="submit">Sign In </button>
+						<button id="login" type="submit">Log In </button>
+					</a>
+				</nav>
+				
+				<!--Adding toggle icon, for collapsible menu-->
+				<a href="#" class="icon" data-toggle="collapse" data-target="TopNavbar" id="toggle">&#9776;</a>
+			</div><!--Closing TopNavbar-->
+
+		</div><!--Closing TopNavbar_container (.elements)-->
+		
+		
+<!--------------------------------------------------------------------------------------------------------------------------------->
+		
+		<!----------------------------------------------------------->
+				              <!--HEADER-->
+		<!----------------------------------------------------------->
+		
+		<!--The header container-->
+		<div class="elements" id="header_container">
+		
+			<!--Centering the header container-->
+			<div class="container" id="header_content">
+				
+				<h1>Find a perfect home for you and your family</h1>
+				
+				<!--Modal form for Sign In-->
+				<div class="modalForm_container" id="SignIn_modal">
+					
+					<div class="modalForm">
+						
+						<div class="contact_row">
+							<span class="close">&times;</span>
+						</div>
+						<div class="contact_row">
+							<div class="message_label">
+								<label for="fname"><span class="redStar">*</span>First Name:</label>
+							</div>
+							
+							<div class="message_input">
+								<input class="message_info" type="text" id="fname"  placeholder="Your first name...">
+							</div>
+						</div>
+						<div class="contact_row">
+							<div class="message_label">
+								<label for="lname"><span class="redStar">*</span>Last Name:</label>
+							</div>
+							
+							<div class="message_input">
+								<input class="message_info" type="text" id="lname"  placeholder="Your last name...">
+							</div>
+						</div>
+						<div class="contact_row">
+							<div class="message_label">
+								<label for="your_email"><span class="redStar">*</span>Email:</label>
+							</div>
+							
+							<div class="message_input">
+								<input class="message_info" type="email" id="your_email"  placeholder="Your email...">
+							</div>
+						</div>
+						
+						<div class="contact_row">
+							<div class="message_label">
+								<label for="your_password"><span class="redStar">*</span>Password:</label>
+							</div>
+							
+							<div class="message_input">
+								<input class="message_info" type="password" id="your_password"  placeholder="Your password...">
+							</div>
+						</div>
+						
+						<div class="contact_row">
+							<div class="message_label">
+								<label for="your_password_confrm"><span class="redStar">*</span>Confirm your password:</label>
+							</div>
+							
+							<div class="message_input">
+								<input class="message_info" type="password" id="your_password_confrm"  placeholder="Your password...">
+							</div>
+						</div>
+						
+						<div class="contact_row">
+							<button class="modalForm_buttons" id="modalSignIn" type="submit">Sign In </button>
+						</div>
+
+					</div><!--End of .modalForm-->
+				</div><!--End of #SignIn_modal-->
+				
+				<!--Modal form for Log In-->
+				<div class="modalForm_container" id="LogIn_modal">
+					
+					<div class="modalForm">
+						
+						<div class="contact_row">
+							<span class="close">&times;</span>
+						</div>
+						<div class="contact_row">
+							<div class="message_label">
+								<label for="your_email"><span class="redStar">*</span>Email:</label>
+							</div>
+							
+							<div class="message_input">
+								<input class="message_info" type="email" id="your_email"  placeholder="Your email...">
+							</div>
+						</div>
+						
+						<div class="contact_row">
+							<div class="message_label">
+								<label for="your_password"><span class="redStar">*</span>Password:</label>
+							</div>
+							
+							<div class="message_input">
+								<input class="message_info" type="password" id="your_password"  placeholder="Your password...">
+							</div>
+						</div>
+						<div class="contact_row">
+							<button class="modalForm_buttons" id="modalLogIn" type="submit">Log In </button>
+						</div>
+
+					</div><!--End of .modalForm-->
+				</div><!--End of #LogIn_modal-->
+				
+				<div id="quickSearch">
+					
+					<select class="rent_buy">
+						<option value="">Rent/Buy</option>
+						<option class="rent" value="rent">Rent</option>
+						<option class="buy" value="buy" >Buy</option>
+					</select>
+					
+					<select class="property">
+						<option value="">Property</option>
+						<option value="apart">Apartment</option>
+						<option value="house">House</option>
+						<option value="businessP">Business premises</option>
+						<option value="storage">Storage</option>
+						<option value="parkingGar">Parking garage</option>
+						<option value="landProp">Land property</option>
+					</select>
+					<select class="structure">
+						<option value="">Structure</option>
+						<option value="stud">Studio</option>
+						<option value="1_br">1 bedroom</option>
+						<option value="1-5_br">1.5 bedrooms</option>
+						<option value="2_br">2 bedrooms</option>
+						<option value="2-5_br">2.5 bedrooms</option>
+						<option value="3_br">3 bedrooms</option>
+						<option value="3-5_br">3.5 bedrooms</option>
+						<option value="4_br">4 bedrooms</option>
+						<option value="4-5_br">4.5 bedrooms</option>
+						<option value="5_br_more">5 bedrooms and more</option>
+					</select>
+					
+					<select class="LocAtions">
+						<option value="">Location</option>
+						<option value="loc1">Location 1</option>
+						<option value="loc2">Location 2</option>
+						<option value="loc3">Location 3</option>
+						<option value="loc4">Location 4</option>
+						<option value="loc5">Location 5</option>
+					</select>
+					<select class="equip">
+						<option value="">Furnished</option>
+						<option value="equip_yes">Yes</option>
+						<option value="equip_no">No</option>
+						<option value="equip_half">Half-furnished</option>
+					</select>
+					
+					<button type="submit" class="searchButton">Search</button>
+				
+				</div><!--End of #quickSearch-->
+				
+			</div><!--End of #header_content-->
+		</div><!--End of #header_container-->
+<!--------------------------------------------------------------------------------------------------------------------------------->
+		
+		<!------------------------------------------------------------------>
+				                <!--SERVICES-->
+		<!------------------------------------------------------------------>
+		<div class="elements" id="service_container">
+			
+			<div class="container" id="service_content">
+				
+				<div class="row" id="service_heading">
+					<h1>Services</h1>
+					<p>Lorem ipsum dolor sit amet, te vis causae petentium salutandi</p>
+				</div><!--end of #service_heading-->
+				
+				<div class="row" id="RentBuyAdvert">
+					
+					<!--For rent part-->
+					<div class="column" id="rent">
+						<img src="images\ForRent.png" class="service_img" id="rent_img">
+						<p>
+						<h2>Rent</h2>
+							Lorem ipsum dolor sit amet, te vis causae petentium salutandi, 
+							te pro omnium timeam periculis. Persius vivendo nominavi te mei, 
+							no volutpat petentium duo. Labitur nostrud per no. Duo diceret debitis no, 
+							est minim soluta comprehensam et. 
+							Pro te adhuc novum inermis, prompta deterruisset no per.
+						</p>
+					</div><!--end of #rent-->
+					
+					<!--For sale part-->
+					<div class="column" id="buy">
+						<img src="images\ForSale.png" class="service_img" id="sale_img">
+						<h2>Buy</h2>
+						<p>
+							Lorem ipsum dolor sit amet, te vis causae petentium salutandi, 
+							te pro omnium timeam periculis. Persius vivendo nominavi te mei, 
+							no volutpat petentium duo. Labitur nostrud per no. Duo diceret debitis no, 
+							est minim soluta comprehensam et. 
+							Pro te adhuc novum inermis, prompta deterruisset no per.
+						</p>
+					</div><!--end of #buy-->
+					
+					<!--Advertising part-->
+					<div class="column" id="advert">
+						<img src="images\Advertise.jpg" class="service_img" id="advert_img">
+						<h2>Advertise</h2>
+						<p>
+							Lorem ipsum dolor sit amet, te vis causae petentium salutandi, 
+							te pro omnium timeam periculis. Persius vivendo nominavi te mei, 
+							no volutpat petentium duo. Labitur nostrud per no. Duo diceret debitis no, 
+							est minim soluta comprehensam et. 
+							Pro te adhuc novum inermis, prompta deterruisset no per.
+						</p>
+					</div><!--end of #advert-->
+
+				</div><!--end of #RentBuyAdvert-->
+			</div><!--end of #service_content-->
+		</div><!--end of #service_container-->
+<!--------------------------------------------------------------------------------------------------------------------------------->
+		
+		<!------------------------------------------------------------------------------->
+				                   <!--MAIN CONTENT-->
+		<!------------------------------------------------------------------------------->
+		
+		<div class="elements" id="main_container">
+			
+			<div class="container" id="offers">
+				
+				<!--<div class="row" id="main_heading">
+					<h1>Our Offers</h1>
+				</div>-->
+				
+				<div class="row" id="main_Content_sidebar">
+					
+					<div id="mainContent">
+						
+						<h1>OUR OFFERS</h1>
+						
+						<div class="row">
+							<h3 id="noMatchMessage"></h3>
+						</div>
+
+						<div class="row">
+							<div class="mainContent_col" data-tag="rent apart 2_br loc1 equip_yes 1st_fl 52 350" id="code_1">
+								
+								<div class="card_header">
+									
+									
+									 <div class="image_container" id="1stSlideshow">
+										<div class="slides_1 slides active-slide" id="img_1">
+											<img class="card_img"  src="images\livingroom\1-wtc-backsplash-cabinets-1439710.jpg">
+										</div>
+										<div class="slides_1 slides" id="img_2">
+											<img class="card_img"  src="images\bedroom\mister-m-596898-unsplash.jpg">
+										</div>
+										<div class="slides_1 slides" id="img_3">
+											<img class="card_img" src="images\kitchen\deborah-cortelazzi-615800-unsplash.jpg">
+										</div>
+										<div class="slides_1 slides" id="img_4">
+											<img class="card_img"  src="images\bathroom\architecture-bathroom-contemporary-280209.jpg">
+										</div>
+										
+										  <!-- Next and previous buttons -->
+										 <div class="prev" onclick="plusDivs(-1, 0)"><span>&#10094;</span></div>
+										 <div class="next" onclick="plusDivs(1, 0)"><span>&#10095;</span></div>
+									</div>
+										 
+										 
+									<!--Save and share options-->
+									<div class="saveShare">
+										<img class="icons heart" src="images\fullHeart.png">
+										<img class="icons share" src="images\kisspng-share.png">
+									</div>
+									
+									<!--For Rent or for sale options-->
+									<div class="rentBuy">
+										<p class="forRent">FOR RENT</p>
+									</div>
+									
+									<div class="prop_div">
+										<p class="prop">Apartment</p>
+									</div>
+									
+								</div>
+								
+								
+								<div class="card_middle">
+									
+									<div class="card_part">
+										<p class="price">350 &euro;</p>
+									</div>
+									<div class="card_part">
+										<p class="locIcon tooltip">
+											<img class="icons" src="images\location.png">
+											<span class="tooltiptext">Location 1</span>
+										</p>
+									</div>
+									<div class="card_part">
+										<p class="equipped">Equipped</p>
+									</div>
+									
+								</div>
+								
+								<div class="card_footer">
+									
+									<div class="footer_part">
+										<p class="size"><img class="icons" src="images\1600.png"></p>
+										<p class="size_text">52 m<sup>2</p>
+									</div>
+									
+									<div class="footer_part">
+										
+										<p class="bed">
+											<img class="icons" src="images\bedIcon.png">
+										</p>
+										<p class="bed_text">2</p>
+									
+									</div>
+									
+									<div class="footer_part">
+										<p class="bath">
+											<img class="icons" src="images\bathIcon.png">
+										</p>
+										<p class="bath_text">1</p>
+									</div>
+
+									
+										<p><a class="details">More details</a></p>
+								
+								</div>
+				
+							</div>
+							
+							<div class="mainContent_col" data-tag = "buy house 1_br loc2 equip_no gr_fl 30 35000" id="code_2">
+								<div class="card_header">
+								
+									<div class="image_container" id="2ndSlideshow">
+										<div class="slides_2 slides" id="img_1">
+											<img class="card_img" src="images\livingroom\apartment-architecture-art-276724.jpg" caption="Living room">
+										</div>
+										<div class="slides_2 slides" id="img_2">
+											<img class="card_img" src="images\bedroom\ialicante-mediterranean-homes-475803-unsplash.jpg" caption="Bedroom">
+										</div>
+										<div class="slides_2 slides" id="img_3">
+											<img class="card_img" src="images\kitchen\naomi-hebert-188443-unsplash.jpg" caption="Kitchen">
+										</div>
+										<!-- <div class="slides_2 slides" id="img_4">
+											<img class="card_img"  src="images\bathroom\architecture-bathroom-contemporary-280209.jpg" caption="Bathroom">
+										</div>-->
+										  <!-- Next and previous buttons -->
+										 <div class="prev" onclick="plusDivs(-1, 1)"><span>&#10094;</span></div>
+										 <div class="next" onclick="plusDivs(1, 1)"><span>&#10095;</span></div>
+									</div>
+									
+									<!--Save and share options-->
+									<div class="saveShare">
+										<img class="icons heart" src="images\fullHeart.png">
+										<img class="icons share" src="images\kisspng-share.png">
+									</div>
+									
+									<!--For Rent or for sale options-->
+									<div class="rentBuy">
+										<p class="forSale">FOR SALE</p>
+									</div>
+									
+									<div class="prop_div">
+										<p class="prop">House</p>
+									</div>
+								
+								</div>
+								
+								<div class="card_middle">
+									<div class="card_part">
+										<p class="price">35000 &euro;</p>
+									</div>
+									<div class="card_part">
+										<p class="locIcon tooltip">
+											<img class="icons" src="images\location.png">
+											<span class="tooltiptext">Location 2</span>
+										</p>
+									</div>
+									<div class="card_part">
+										<p class="equipped">Unequipped</p>
+									</div>
+								</div>
+								
+								<div class="card_footer">
+									<div class="footer_part">
+										<p class="size"><img class="icons" src="images\1600.png"></p>
+										<p class="size_text">30 m<sup>2</p>
+									</div>
+									
+									<div class="footer_part">
+										
+										<p class="bed">
+											<img class="icons" src="images\bedIcon.png">
+										</p>
+										<p class="bed_text">1</p>
+									
+									</div>
+									
+									<div class="footer_part">
+										<p class="bath">
+											<img class="icons" src="images\bathIcon.png">
+										</p>
+										<p class="bath_text">1</p>
+									</div>
+								</div>
+							</div>
+							
+							<div class="mainContent_col" data-tag = "buy apart 3_br loc3 equip_half 2nd_fl 70 80000" id="code_3">
+								<div class="card_header">
+									
+										<img class="card_img" src="images\livingroom\apartment-architecture-bedroom-210552.jpg">
+									
+									<!--Save and share options-->
+									<div class="saveShare">
+										<img class="icons heart" src="images\fullHeart.png">
+										<img class="icons share" src="images\kisspng-share.png">
+									</div>
+									
+									<!--For Rent or for sale options-->
+									<div class="rentBuy">
+										<p class="sold">SOLD</p>
+									</div>
+									
+									<div class="prop_div">
+										<p class="prop">Apartment</p>
+									</div>
+								</div>
+								
+								<div class="card_middle">
+									<div class="card_part">
+										<p class="price">80000 &euro;</p>
+									</div>
+									<div class="card_part">
+										<p class="locIcon tooltip">
+											<img class="icons" src="images\location.png">
+											<span class="tooltiptext">Location 3</span>
+										</p>
+									</div>
+									<div class="card_part">
+										<p class="equipped">Half-equipped</p>
+									</div>
+								</div>
+								
+								<div class="card_footer">
+									<div class="footer_part">
+										<p class="size"><img class="icons" src="images\1600.png"></p>
+										<p class="size_text">70 m<sup>2</p>
+									</div>
+									
+									<div class="footer_part">
+										
+										<p class="bed">
+											<img class="icons" src="images\bedIcon.png">
+										</p>
+										<p class="bed_text">3</p>
+									
+									</div>
+									
+									<div class="footer_part">
+										<p class="bath">
+											<img class="icons" src="images\bathIcon.png">
+										</p>
+										<p class="bath_text">1</p>
+									</div>
+								</div>
+							</div>
+						
+						
+							<div class="mainContent_col" data-tag = "rent house 3_br loc2 equip_half gr_fl 100 400" id="code_4">
+								<div class="card_header">
+									
+									<img class="card_img" src="images\livingroom\apartment-architecture-bedroom-210552.jpg">
+									
+									<!--Save and share options-->
+									<div class="saveShare">
+										<img class="icons heart" src="images\fullHeart.png">
+										<img class="icons share" src="images\kisspng-share.png">
+									</div>
+									
+									<!--For Rent or for sale options-->
+									<div class="rentBuy">
+										<p class="forRent">FOR RENT</p>
+									</div>
+									
+									<div class="prop_div">
+										<p class="prop">House</p>
+									</div>
+								</div>
+								
+								<div class="card_middle">
+									<div class="card_part">
+										<p class="price">400 &euro;</p>
+									</div>
+									<div class="card_part">
+										<p class="locIcon tooltip">
+											<img class="icons" src="images\location.png">
+											<span class="tooltiptext">Location 2</span>
+										</p>
+									</div>
+									<div class="card_part">
+										<p class="equipped">Half-equipped</p>
+									</div>
+								</div>
+								
+								<div class="card_footer">
+									<div class="footer_part">
+										<p class="size"><img class="icons" src="images\1600.png"></p>
+										<p class="size_text">100 m<sup>2</p>
+									</div>
+									
+									<div class="footer_part">
+										
+										<p class="bed">
+											<img class="icons" src="images\bedIcon.png">
+										</p>
+										<p class="bed_text">3</p>
+									
+									</div>
+									
+									<div class="footer_part">
+										<p class="bath">
+											<img class="icons" src="images\bathIcon.png">
+										</p>
+										<p class="bath_text">1</p>
+									</div>
+								</div>
+							</div>
+							
+							<div class="mainContent_col" data-tag = "rent apart 3_br loc4 3rd_fl equip_yes 72 450" id="code_5">
+								<div class="card_header">
+									
+									<img class="card_img" src="images\livingroom\1-wtc-backsplash-cabinets-1439710.jpg">
+									
+									<!--Save and share options-->
+									<div class="saveShare">
+										<img class="icons heart" src="images\fullHeart.png">
+										<img class="icons share" src="images\kisspng-share.png">
+									</div>
+									
+									<!--For Rent or for sale options-->
+									<div class="rentBuy">
+										<p class="forRent">FOR RENT</p>
+									</div>
+									
+									<div class="prop_div">
+										<p class="prop">Apartment</p>
+									</div>
+									
+								</div>
+								
+								
+								<div class="card_middle">
+									
+									<div class="card_part">
+										<p class="price">450 &euro;</p>
+									</div>
+									<div class="card_part">
+										<p class="locIcon tooltip">
+											<img class="icons" src="images\location.png">
+											<span class="tooltiptext">Location 4</span>
+										</p>
+									</div>
+									<div class="card_part">
+										<p class="equipped">Equipped</p>
+									</div>
+									
+								</div>
+								
+								<div class="card_footer">
+									
+									<div class="footer_part">
+										<p class="size"><img class="icons" src="images\1600.png"></p>
+										<p class="size_text">72 m<sup>2</p>
+									</div>
+									
+									<div class="footer_part">
+										
+										<p class="bed">
+											<img class="icons" src="images\bedIcon.png">
+										</p>
+										<p class="bed_text">3</p>
+									
+									</div>
+									
+									<div class="footer_part">
+										<p class="bath">
+											<img class="icons" src="images\bathIcon.png">
+										</p>
+										<p class="bath_text">1</p>
+									</div>
+								
+								</div>
+							</div>
+							
+							<!--<div class="mainContent_col">
+							
+							</div>
+						
+						
+							<div class="mainContent_col">
+							
+							</div>
+							
+							<div class="mainContent_col">
+							
+							</div>
+							
+							<div class="mainContent_col">
+							
+							</div>-->
+						
+						</div> <!--end of .row-->
+						
+						<!--setting the pagination-->
+						<div class="pagination">
+							  <a href="#">&laquo;</a>
+							  <a class="active" href="#">1</a>
+							  <a href="#">2</a>
+							  <a href="#">3</a>
+							  <a href="#">4</a>
+							  <a href="#">5</a>
+							  <a href="#">6</a>
+							  <a href="#">&raquo;</a>
+						</div><!--end of .pagination-->
+
+					</div><!--end of .mainContent-->
+					
+					
+					<div id="main_sidebar">
+						<div class="mainContent_col_side">
+							<h2>NAVIGATION</h2>
+							<p>Search properties according to the desired criteria.</p>
+							<select class="rent_buy">
+								<option value="">Rent/Buy</option>
+								<option value="rent">Rent</option>
+								<option value="buy" >Buy</option>
+							</select>
+							
+							<select class="property">
+								<option value="">Property</option>
+								<option value="apart">Apartment</option>
+								<option value="house">House</option>
+								<option value="businessP">Business premises</option>
+								<option value="storage">Storage</option>
+								<option value="parkingGar">Parking garage</option>
+								<option value="landProp">Land property</option>
+							</select>
+							
+							<select class="structure">
+								<option value="">Structure</option>
+								<option value="stud">Studio</option>
+								<option value="1_br">1 bedroom</option>
+								<option value="1-5_br">1.5 bedrooms</option>
+								<option value="2_br">2 bedrooms</option>
+								<option value="2-5_br">2.5 bedrooms</option>
+								<option value="3_br">3 bedrooms</option>
+								<option value="3-5_br">3.5 bedrooms</option>
+								<option value="4_br">4 bedrooms</option>
+								<option value="4-5_br">4.5 bedrooms</option>
+								<option value="5_br_more">5 bedrooms and more</option>
+							</select>
+							
+							<select class="LocAtions">
+								<option value="">Location</option>
+								<option value="loc1">Location 1</option>
+								<option value="loc2">Location 2</option>
+								<option value="loc3">Location 3</option>
+								<option value="loc4">Location 4</option>
+								<option value="loc5">Location 5</option>
+							</select>
+																												
+							<select class="equip">
+								<option value="">Furnished</option>
+								<option value="equip_yes">Yes</option>
+								<option value="equip_no">No</option>
+								<option value="equip_half">Half-furnished</option>
+							</select>
+							
+							<select class="floor">
+								<option value="">Floor</option>
+								<option value="gr_fl">Ground floor</option>
+								<option value="1st_fl">1st floor</option>
+								<option value="2nd_fl">2nd floor</option>
+								<option value="3rd_fl">3rd floor</option>
+								<option value="4th_fl">4th floor</option>
+								<option value="5th_fl">5th floor</option>
+								<option value="6th_fl">6th floor</option>
+								<option value="7th_fl">7th floor</option>
+								<option value="8th_fl">8th floor</option>
+								<option value="9th_fl">9th floor</option>
+								<option value="10th_fl">10th floor</option>
+							</select>
+							
+							<div class="limit" id="size_range">
+								<label>Size in m<sup>2</sup></label>
+								<input class="limit_input" id="size_min" type="number" placeholder="From">
+								<input class="limit_input" id="size_max" type="number" placeholder="To">
+							</div>
+							
+							
+							<div class="limit" id="price_range">
+								<label>Price in &euro; </label>
+								<input class="limit_input" id="price_min" type="number" placeholder="From">
+								<input class="limit_input" id="price_max" type="number" placeholder="To">
+							</div>
+
+							<button type="submit" class="searchButton">Search</button>
+							
+						</div><!--End of .mainContent_col_side-->
+					
+					</div><!--End of #main_sidebar-->
+
+				</div><!--End of #main_Content_sidebar-->
+			</div><!--End of #offers-->
+		</div><!--End of #main_container-->
+		
+<!--------------------------------------------------------------------------------------------------------------------------------->
+		
+		<!-------------------------------------------------------------->
+				                 <!--FOOTER-->
+		<!--------------------------------------------------------------->
+		
+		<div class="elements" id="footer_container">
+			<div class="container" id="footer_content">
+				<div class="footer_row">
+					<div id="subscribe">
+						<p>Do not miss our latest offers!</p>
+						<p>Sign up and get the latest deals on your e-mail address!</p>
+						<div id="signUp">
+							<input type="email" placeholder="example@gmail.com">
+							<button type="submit">Sign Up</button>
+						</div>
+					</div>
+				
+				</div>
+				
+				<div class="footer_row">
+					<div class="footer_col" id="footer_nav">
+						<h4>Navigation</h4>
+						<ul>
+							<li><a class="manuItem active" href="RealEstate.html">Home</a></li>
+							<li><a class="menuItem" href="RealEstate_about.html" id="about">About</a></li>
+							<li><a class="menuItem" href="RealEstate_rent.html" id="rent">Rent</a></li>
+							<li><a class="menuItem" href="RealEstate_buy.html" id="buy">Buy</a></li>
+							<li><a class="menuItem" href="RealEstate_advert.html" id="advert">Advertise</a></li>
+						</ul>
+	
+					</div>
+					<div class="footer_col" id="footer_contact">
+						<h4>Contact</h4>
+						<div class="contact_row">
+							
+							<div class="contact_col_input">
+								<input type="text" id="address" readonly  value="StreetName 123, 12345, Country">
+							</div>
+						</div>
+						
+						<div class="contact_row">
+		
+							<div class="contact_col_input">
+								<input type="text" id="email" readonly  value="info@reweb.com">
+							</div>
+						</div>
+						
+						<div class="contact_row">
+				
+							
+							<div class="contact_col_input">
+								<input type="text" id="phone" readonly  value="012/123 456 789">
+							</div>
+						</div>
+					</div>
+
+					<div class="footer_col" id="footer_form">
+						<h4 id="h4_message">Send us a message!</h4>
+						<div class="contact_row">
+							<div class="message_label">
+								<label for="fname">First Name:</label>
+							</div>
+							
+							<div class="message_input">
+								<input class="message_info" type="text" id="fname"  placeholder="Your first name...">
+							</div>
+						</div>
+						<div class="contact_row">
+							<div class="message_label">
+								<label for="lname">Last Name:</label>
+							</div>
+							
+							<div class="message_input">
+								<input class="message_info" type="text" id="lname"  placeholder="Your last name...">
+							</div>
+						</div>
+						<div class="contact_row">
+							<div class="message_label">
+								<label for="your_email">Email:</label>
+							</div>
+							
+							<div class="message_input">
+								<input class="message_info" type="email" id="your_email"  placeholder="Your email...">
+							</div>
+						</div>
+						<div class="contact_row">
+							<div class="contact_col_labl" id="message_label">
+								<label for="message">Message:</label>
+							</div>
+							
+							<div class="contact_col_input" id="message">
+								<textarea placeholder="Your message..."></textarea>
+							</div>
+							<div class="contact_row">
+								<button id="send_button" type="submit">Send</button>
+							</div>
+						</div>
+					
+					</div>
+									
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			<div class="container">
+				<div id="designInfo">
+					<a href="#">Designed by &copy; Jelena Todorovic</a>
+				</div>
+				
+				<div id="followInfo">
+					<ul>
+						<li><a href="#" class="fa fa-facebook"></a></li>
+						<li><a href="#" class="fa fa-twitter"></a></li>
+						<li><a href="#" class="fa fa-instagram"></a></li>
+					</ul>
+				</div>
+				<div id="privacyInfo">
+					<a href="#">Privacy and Policy</a>
+				</div>
+			</div>
+		</div>
+	
+
+
+
+<!-----------------------------------------------JavaScript---------------------------------------------------------------------------------->
+		
+		<script type="text/javascript" src="RealEstateJS.js"></script> 
+	
+	
+
+	</body><!--End of body-->
+
+</html><!--End of html-->

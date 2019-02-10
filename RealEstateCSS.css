@@ -1,0 +1,1437 @@
+html {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+*, *:after, *:before{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+body {
+	width:100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Helvetica', 'sans-serif';
+	
+}
+
+.elements{
+	width:100%;
+	margin:0;
+	padding:0;
+	
+}
+
+/*centering the header content*/
+.container{
+	width:70%;
+	height:100%;
+	margin:0 auto;
+	padding:0;
+}
+
+/*Clearing floats of the parent's children*/
+.container:after{
+	display:table;
+	clear:both;
+	content:"";
+}
+
+
+.row{
+	width: 100%;
+}
+
+/*********************************************************************************
+									TOP MENU
+*********************************************************************************/
+#TopNav_container{
+	height:3rem;
+	background-color: #CEE0CB;
+	font-size: 1rem;
+}
+/*centering the menu elements*/
+#TopNavbar{
+	width:65%;
+	height:100%;
+	margin:0 auto;
+	position:relative; /*To use z-index, position needs to be set to relative*/
+	z-index:99999;
+}
+
+/*clearing the floats of the menu's children*/
+#TopNavbar:after{
+	display:table;
+	clear:both;
+	content:"";
+}
+
+/*styling the navigation elements*/
+#TopNav{
+	width:100%;
+	height: 100%;
+	padding:0;
+	margin: 0;
+}
+
+#TabNav:after{
+	display: table;
+	clear:both;
+	content:"";
+}
+
+#TopNav_container:after{
+	display: table;
+	clear: both;
+	content:"";
+}
+#TopNav a:not(:last-child){
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	padding-top:0.8rem;
+	min-width:calc(((100% - 17 * 0.5rem - 0.8rem) / 12) * 1);
+	text-align: center;
+	height: 100%;
+	float:left;
+	text-decoration: none;
+	color:black;
+}
+
+#TopNav  a:not(:first-child):hover{
+	color: green;
+	text-shadow: 1px 1px 1px green;
+}
+
+/*styling the active link*/
+#TopNav a.active{
+	color:green;
+	font-weight:bold;
+}
+
+/*styling the container of sign in and log in buttons*/
+#buttons{
+	 float:right;
+ }
+ 
+ /*styling the sign in and log in buttons*/
+#buttons button{
+	padding: 0.3rem;
+	font-size: 1rem;
+	margin: 0.5rem 0.5rem 0rem 0.5rem;
+	min-width:calc(((100% - 17 * 0.5rem - 0.8rem) / 12) * 1);
+	float:left;
+	text-align: center;
+	border-radius: 6px;
+	background-color: #33CC99;
+}
+/*clearing the floats*/
+#buttons:after{
+	display: table;
+	clear:both;
+	content:"";
+}
+/* Hide the link that should open and close the topnav on small screens */
+a.icon {
+	display: none;
+	position: relative;
+	top:-2.6rem;
+	right:0.5rem;
+	text-decoration: none;
+	color: black;
+	font-size:1.5rem;
+}
+
+
+
+/*Setting media query to hide regular menu and to show toggle icon*/
+@media screen and (max-width: 960px) {
+	a:not(:first-child){
+		display: none;
+	}
+	#buttons button {
+		display: none;
+	}
+	a.icon { /*setting toggle icon to be visible once the screen size is 900px and less*/
+		float: right;
+		display: inline-block;
+	}
+
+	.responsive a.icon {
+		position: relative;
+		top:-20.6rem;
+	}
+
+	.responsive #TopNav a{
+		display: block;
+		text-align: left;
+		float: none;
+		height: 100%;
+		width: 100%;
+		margin-left:0;
+		padding-left:0.5rem;
+		background-color: #CEE0CB;
+	}
+	
+	.responsive #buttons button{
+		display: block;
+		float:left;
+		margin-left:0;
+	}
+
+}
+
+/**************************************************************************************************
+										HEADER
+*****************************************************************************************************/
+
+
+/*styling the header contaienr*/
+#header_container{
+	background-image: url("images/header.jpg");
+	background-size: cover;
+	background-position: center bottom;
+	height: 800px;
+	padding-top: 90px;
+}
+
+/*styling the headers title*/
+#header_container h1{
+	text-align: center;
+	vertical-align: center;
+	max-width: 570px;
+	margin: 0 auto;
+	color: #CEE0CB;
+	font-size: 4rem;
+	font-weight: normal;
+	font-style: italic;
+	padding:0;
+}
+
+/*positioning the header's content*/
+#header_content{
+	position:relative;
+}
+
+/*styling the container of the search options in the header*/
+#quickSearch{
+	width: 80%;
+	position: absolute;
+	bottom:2%;
+	left: 10%;
+	-wbkit-flex-wrap:wrap;
+	display:flex;
+	text-align: center;
+	align-items: center;
+	flex-wrap:wrap;
+	background-color: #D1E4D1;
+	opacity: 0.9;
+	padding-left:2%;
+	padding-right: 2%;
+	border-radius: 6px;
+}
+
+/*styling search options*/
+#quickSearch select{
+	min-width: calc((100% / 12) * 2);
+	height: 40px;
+	font-size: 1rem;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	flex-grow: 1;
+	border-radius: 5px;
+}
+
+/*styling the search buttons*/
+#quickSearch button{
+	min-width: calc((100% / 12)*1);
+	height: 40px;
+	font-size: 1rem;
+	padding: 0.3rem;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	border-radius: 6px;
+	background-color: #33CC99;
+}
+
+/**************************Modal Forms*****************************************/
+
+/*styling the container of a modal form*/
+.modalForm_container{
+	z-index: 1;
+	width:100%;
+	height: 100%;
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding:0;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+/*modal form*/
+.modalForm{
+	overflow: auto;
+	background-color: #CEE0CB;
+	/*position: fixed;
+	top: 7%;
+	left: 32.5%;
+	margin:0 auto;
+	width: 35%;*/
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	
+}
+
+/*hidden modal forms*/
+#SignIn_modal, #LogIn_modal {
+	display: none;
+}
+
+/*stylign of buttons in modal form*/
+.modalForm_buttons{
+	padding: 0.3rem;
+	font-size: 1rem;
+	margin: 0.5rem 0.5rem 0rem 0.5rem;
+	min-width:calc(((100% - 17 * 0.5rem - 0.8rem) / 12) * 1);
+	float:left;
+	text-align: center;
+	border-radius: 6px;
+	background-color: #33CC99;
+	
+}
+
+/*close button*/
+.close {
+  color: black;
+  float: right;
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  margin-top:-0.5rem;
+}
+.close:hover{
+	cursor:pointer;
+}
+
+/*styling the star-important field to fill in*/
+.redStar{
+	color:red;
+	font-size: 1.1rem;
+}
+
+/**********************Making forms responsive***************/
+@media only screen and (min-width: 400px){
+	.modalForm {
+		position: fixed;
+		top: 7%;
+		left: 15%;
+		/*margin:0 auto;*/
+		width: 70%;
+	}
+	
+}
+@media only screen and (min-width: 600px){
+	.modalForm {
+		position: fixed;
+		top: 7%;
+		left: 15%;
+		/*margin:0 auto;*/
+		width:70%;
+	}
+	
+}
+@media only screen and (min-width: 700px){
+	.modalForm {
+		position: fixed;
+		top: 7%;
+		left: 25%;
+		/*margin:0 auto;*/
+		width:50%;
+	}
+	
+}
+
+@media only screen and (min-width: 960px){
+	.modalForm {
+		position: fixed;
+		top: 7%;
+		left: 30%;
+		/*margin:0 auto;*/
+		width:40%;
+	}
+	
+}
+
+@media only screen and (min-width: 1200px){
+	.modalForm {
+		position: fixed;
+		top: 7%;
+		left: 32.5%;
+		/*margin:0 auto;*/
+		width:35%;
+	}
+	
+}
+
+/*****************************************************************************************
+										SERVICES
+*****************************************************************************************/
+
+/*styling the conatiner for service content*/
+#service_container{
+	display: flex;
+	flex-wrap: wrap;
+	background-color:#FFFAF0;
+	background:linear-gradient(to top,#9fdfbf, #e6ffe6, #FFFAF0);
+}
+
+/*centering the service content*/
+#service_content{
+	margin:0 auto;
+	text-align: center;
+	padding-top: 30px;
+}
+
+/*service title*/
+#service_content h1{
+	margin-top:0;
+	font-weight: normal;
+	font-size: 3rem;
+	margin-bottom:0;
+}
+
+/
+#service_heading p{
+	font-style: italic;
+	color: gray;
+}
+
+/*styling the service columns*/
+.column{
+	padding: 0.5rem;
+	height: 100%;
+	margin-left: 0.5rem;
+	margin-right:0.5rem;
+	margin-bottom: 1rem;
+}
+
+/*styling the srevice's images*/
+.service_img{
+	height: 150px;
+	width: 150px;
+	margin: 0.5rem;
+}
+
+/*styling the advertisment image*/
+#advert_img{
+	border-radius: 50%;
+	padding: 0.2rem;
+}
+
+/*****************Responsive Service**************/
+@media only screen and (min-width: 600px){
+	#RentBuyAdvert .column {
+		width: 80%;
+		margin: 0 auto;
+		float:none;
+		margin-bottom: 1rem;
+	}
+	
+}
+@media only screen and (min-width: 700px){
+	#RentBuyAdvert .column{
+		width: calc((100% - 4*0.5rem) / 2);
+		float:left;
+		margin-left: 0.5rem;
+		margin-right:0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	#advert.column {
+		margin-left: 25%;
+		float:left;
+	}
+	
+}
+
+@media only screen and (min-width: 1140px){
+	#RentBuyAdvert .column {
+		width: calc((100% - 6*0.5rem) / 3);
+		float:left;
+	}
+	#advert.column {
+		width: calc((100% - 6*0.5rem) / 3);
+		margin-left: 0.5rem;
+		margin-right:0.5rem;
+		margin-bottom: 1rem;
+
+	}
+	
+}
+
+/***********************************************************************************
+					MAIN CONTENT AND SIDE NAVIGATION
+************************************************************************************/
+
+/*Styling the main container, containing main content and main side navigation*/
+#main_container {
+	display:flex;
+	flex-wrap:wrap;
+	background-color:#F6F6F6;
+	padding-top: 30px;
+	padding-bottom: 1rem;
+}
+
+#main_heading h1{
+	margin-top:0;
+	text-align: center;
+}
+
+/*styling container fo main content and side navigation*/
+#main_Content_sidebar{
+	margin:0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+/*****************************************MAIN CONTENT START********************************************************/
+/*styling the main content*/
+#mainContent{
+	float:left;
+	/*background-color: #9fdfbf;*/
+	text-align: center;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+/*styling the columns/cards of the main content*/
+.mainContent_col{
+	height: 330px;
+	float: left;
+	margin: 0.5rem;
+	background-color: white;
+	border-radius: 7px;
+	box-shadow: 6px 6px 6px gray;
+	background-color: #9fdfbf;
+	background:linear-gradient(to bottom, #e6ffe6, #9fdfbf, white);
+	display:flex;
+	flex-wrap:wrap;
+}
+
+/********************************CARD HEADER******************************************/
+/*styling of the card header-part with pictures*/
+.card_header{
+	height: 55%;
+	width: 100%;
+	margin:0;
+	padding:0;
+	background-size: cover;
+	background-position: center bottom;
+	border-radius: 7px;
+	position: relative;
+	
+}
+
+/*container of images/slideshow*/
+.image_container{
+	height:100%;
+	width:100%;
+	background-size:cover;
+	margin:0;
+	display:flex;
+	/*to prevent the pictures to appear larger than the container*/
+	overflow:hidden; 
+	position: relative;
+}
+
+/*styling of images*/
+.card_img{
+	height:100%;
+	width:100%;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+
+/*for slides*/
+.slides{
+	display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	float:left;
+	/*margin-top: -22px;*/
+	padding: 0.6rem;
+	color: white;
+	font-weight: bold;
+	font-size: 1.1rem;
+	transition: 0.6s ease;
+	/*border-radius: 0 3px 3px 0;*/
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	 right: 0;
+	 border-radius: 3px 0 0 3px;
+	 padding-right: 0.8rem;
+}
+
+/* Position the "previous button" to the left */
+.prev {
+	left: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+ 	background-color: rgba(0,0,0,0.8);
+}
+
+/*container of save/share icons*/
+.saveShare{
+	background-color: #9fdfbf;
+	/*height: 30px;*/
+	/*width: 30%;*/
+	position: absolute;
+	top:-0.3rem;
+	left:-0.3rem;
+	display:flex;
+	border-top-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	box-shadow: 5px 5px 5px gray;
+}
+
+/*heart icon for save*/
+.heart{
+	position: relative;
+	top:0;
+	left:0;
+	height:22px;
+	margin: 0.4rem 0rem 0.4rem 0.6rem;
+
+}
+
+/*share icon for sharing*/
+.share{
+	position: relative;
+	top:0;
+	left: 0;
+	height:22px;
+	margin: 0.4rem 0.5rem 0.4rem 0.5rem;
+	
+}
+
+/*container of rent/buy definitions*/
+.rentBuy{
+	background-color: #9fdfbf;
+	position: absolute;
+	top:-0.3rem;
+	right:-0.3rem;
+	border-color:green;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	box-shadow: 5px 5px 5px gray;
+	display:flex;
+}
+.rentBuy p{
+	margin: 0.5rem 0.3rem;
+	font-weight: bold;
+}
+/*styling sold possibility*/
+.sold{
+	color:red;
+}
+
+/*styling container for defining the property*/
+.prop_div{
+	position: absolute;
+	bottom:0;
+	left:0;
+	display:flex;
+	/*background-color: #9fdfbf;*/
+}
+
+.prop{
+	margin: 0.5rem 0.3rem;
+	font-weight: bold;
+	font-style:italic;
+	color:#60FFE9; 
+}
+
+/********************************CARD MIDDLE*********************************************/
+
+/*styling of the card middle part-part with info about location, prices and equip*/
+.card_middle{
+	width: 100%;
+	margin:0;
+	/*border-top: 1px solid gray;*/
+	font-size: 1rem;
+	display:flex;
+	flex-wrap:wrap;
+	padding-left: 0.5ram;
+	padding-right: 0.5rem;
+	align-items: center;
+	justify-content:center;
+}
+
+/*defining the width of the 1st child*/
+.card_middle div:nth-child(1){
+	width: calc(((100% - 6*0.5rem) / 12) * 4);
+}
+
+/*defining the width of the 2nd child*/
+.card_middle div:nth-child(2){
+	/*text-align: center;*/
+	width: calc(((100% - 6*0.5rem) / 12) * 2);
+	padding-top:0;
+}
+
+/*defining the width of the 3rd child*/
+.card_middle div:nth-child(3){
+	width: calc(((100% - 6*0.5rem) / 12) * 5);
+}
+
+/*styling the container of columns in the middle part*/
+.card_part{
+	/*float:left;*/
+	margin:0.6rem 0.5rem;
+	/*width: calc(((100% - 6*0.5rem) / 12) * 4);*/
+	font-weight: bold;
+	font-size: 1.1rem;
+	display:flex;
+	flex-wrap:wrap;
+	align-items: center;
+	justify-content:center;
+}
+
+.card_part p{
+	margin:0;
+	padding:0;
+}
+/*removing all floats*/
+.card_part:after{
+	clear:both;
+	display: table;
+	content:"";
+}
+
+/*defining the tooltip for location of the property*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+ }
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: #33CC99;
+	color: white;
+	font-weight:normal;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	font-size: 1rem;
+	
+	/* Position the tooltip */
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	 margin-left: -60px;
+	z-index: 1;
+	
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #33CC99 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+/********************************CARD FOOTER******************************************/
+
+/*styling of the card footer-part with icons of bedroom, batch and size of the property*/
+.card_footer{
+	width: 100%;
+	height: 30%;
+	margin:0;
+	padding-top: 1rem;
+	border-top: 1px dashed gray;
+	display:flex;
+	flex-wrap:wrap;
+}
+
+/*defining the width of the 1st child*/
+.card_footer div:nth-child(1) {
+	width: calc(((100% - 6*0.3rem) / 12) * 5);
+}
+
+/*defining the width of the 2nd child*/
+.card_footer div:nth-child(2) {
+	width: calc(((100% - 6*0.3rem) / 12) * 3);
+}
+
+/*defining the width of the 3rd child*/
+.card_footer div:nth-child(3) {
+	width: calc(((100% - 6*0.3rem) / 12) * 3);
+	float:right;
+	margin-left: 0.8rem;
+}
+
+/*syling of footer columns*/
+.footer_part{
+	float:left;
+	margin: 0.3rem;
+	/*background-color:yellow;*/
+	padding:0 ;
+	display:flex;
+	flex-wrap: wrap;
+}
+
+/*removing all the floats*/
+.footer_part:after{
+	clear:both;
+	display: table;
+	content:"";
+}
+
+/*styling the icons*/
+.icons{
+	height:20px;
+	margin-top: 0.2rem;
+	display: inline-block;
+}
+
+/*icon for size of the property*/
+.size{
+	margin:0;
+	width: 40%;
+	/*background-color:gray;*/
+}
+
+/*text of the size*/
+p.size_text{
+	margin:0;
+	width: 60%;
+	/*background-color:gray;*/
+	text-align: left;
+}
+
+/*icon for bedrooms*/
+.bed{
+	margin:0rem 0.2rem 0rem 0.2rem;
+	/*background-color:gray;*/
+	width: calc((100% - 4*0.2rem) / 2);
+}
+
+/*number of bedrooms*/
+p.bed_text{
+	margin:0.3rem 0.2rem 0rem 0.2rem;
+	/*background-color:gray;*/
+	width: calc((100% - 4*0.2rem) / 2);
+}
+
+/*icon for bathroom*/
+.bath{
+	margin:0rem 0.2rem 0rem 0.2rem;
+	/*background-color:gray;*/
+	width: calc((100% - 4*0.2rem) / 2);
+	text-align: right;
+}
+/*text for bathroom number*/
+p.bath_text{
+	margin:0.4rem 0.2rem 0rem 0.2rem;
+	text-align: right;
+	/*background-color:gray;*/
+	width: calc((100% - 4*0.2rem) / 2);
+}
+
+/************************Pagination************************************/
+
+/*styling the pagination*/
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+/*styling the active pagination*/
+.pagination a.active {
+	color:green;
+	font-weight:bold;
+	background-color:#B9E7D0;
+}
+
+.pagination a:hover:not(.active) {
+	background-color: #ddd;
+	
+}
+#noMatchMessage{
+	font-style: italic;
+	color:#33CC99;
+	font-weight: bold;
+	
+}
+
+/****************************************END OF MAIN CONTENT*********************************************************/
+
+
+/*****************************************SIDE NAVIGATION START**********************************************************/
+/*styling the side navigation*/
+#main_sidebar{
+	height: 100%;
+	float:left;
+	background-color: #9fdfbf;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: center;
+	border-radius: 7px;
+	box-shadow: 6px 6px 6px gray;
+	/*opacity: 0.8;*/
+	background:radial-gradient(#e6ffe6, #9fdfbf);
+}
+
+
+
+/*styling the columns/cards of the side navigation*/
+.mainContent_col_side{
+	width: calc(100% - 2*0.5rem);
+	height: 100%;
+	border-radius: 6px;
+	float: left;
+	margin: 0.5rem;
+}
+
+/*styling the button in the side navigation*/
+.mainContent_col_side button{
+	padding: 0.3rem;
+	font-size: 1rem;
+	border-radius: 6px;
+	background-color: #33CC99;
+	float: right;
+	color:black;
+}
+
+
+/*styling the select options in the side navigation*/
+.mainContent_col_side select{
+	width: 100%;
+	height: 40px;
+	border-radius: 6px;
+	margin-bottom: 0.5rem;
+	font-size: 1rem;
+}
+
+/*styling container fo size and price ranges*/
+.limit{
+	width: 100%;
+}
+.limit label{
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+}
+.limit_input{
+	display: inline-block;
+	float:left;
+	width: calc((100% - 2*0.5rem) / 2);
+	margin-bottom: 0.5rem;
+	font-size:0.9rem;
+}
+#price_min, #size_min{
+	margin-right: 0.5rem;
+}
+#price_max, #size_max{
+	margin-left: 0.5rem;
+}
+/****************************************END OF SIDE NAVIGATION********************************************************/
+/*responisve main and side bar*/
+@media only screen and (min-width: 400px){
+	.mainContent_col{
+		width: calc(100% - 2*0.5rem);
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	#mainContent{
+		width: 100%;
+		margin-right:0;
+	}
+	#main_sidebar{
+		width: 100%;
+		margin-left:0;
+		margin-top: 0.5rem;
+	}
+		
+}
+@media only screen and (min-width: 640px){
+	.mainContent_col{
+		width: calc(100% - 2*0.5rem);
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	#mainContent{
+		width: calc(((100% - 2*0.5rem) / 12) * 8);
+		margin-right:0.4rem;
+		float: left;
+	}
+	#main_sidebar{
+		width: calc(((100% - 2*0.5rem) / 12) * 4);
+		margin-left:0.5rem;
+		margin-top: 0;
+		float: right;
+	}
+	
+	
+}
+
+@media only screen and (min-width: 960px){
+	.mainContent_col{
+		width: calc((100% - 4*0.5rem) / 2);
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	#mainContent{
+		width: calc(((100% - 2*0.5rem) / 12) * 9);
+		margin-right:0.5rem;
+		float: left;
+	}
+	#main_sidebar{
+		width: calc(((100% - 2*0.5rem) / 12) * 3);
+		margin-left:0.5rem;
+		margin-top: 0;
+		float: right;
+	}
+	
+}
+
+@media only screen and (min-width:1400px){
+	.mainContent_col{
+		width: calc(((100% - 6*0.5rem) / 12) * 4);
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	#mainContent{
+		width: calc(((100% - 2*0.5rem) / 12) * 9);
+		margin-right:0.5rem;
+		float: left;
+	}
+	#main_sidebar{
+		width: calc(((100% - 2*0.5rem) / 12) * 3);
+		margin-left:0.5rem;
+		margin-top: 0;
+		float: right;
+	}
+	
+}
+
+/******************************************END OF MAIN PART*************************************************************/
+
+
+
+/***********************************************************************************************************
+												FOOTER
+************************************************************************************************************/
+
+/*styling the footer contaier*/
+#footer_container{
+	background-color: #CEE0CB;
+	background:radial-gradient(#9fdfbf, #e6ffe6);
+	margin:0;
+	padding: 0;
+	height: 100%;
+}
+/*styling the footer content*/
+#footer_content {
+	padding:0;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*footer heading*/
+#footer_content h4{
+	margin:0rem 0rem 1rem 0.5rem;
+}
+
+/*styling the footer rows*/
+.footer_row{
+	width: 100%;
+	height: calc((100% - 4*0.5rem) / 2);
+	margin-bottom:0.5rem;
+	margin-top: 0.5rem;
+}
+
+/*styling the footer columns*/
+.footer_col{
+	height:100%;
+	float: left;
+	margin: 0.5rem;
+	border-radius: 5px;
+}
+
+/*styling the div for the subscritpion */
+#subscribe{
+	text-align: center;
+	margin-top: 0.8rem;
+}
+#subscribe p{
+	font-style: italic;
+	padding:0;
+	color:#A9A9A9;
+	font-size: 1rem;
+	margin-top:0;
+}
+#subscribe p:first-child{
+	font-size: 1.2rem;
+	margin-bottom: 0;
+	color: gray;
+}
+
+/*styling the sign up section*/
+#signUp{
+	margin-bottom: 0.5rem;
+	font-size:1rem;
+}
+/*styling the sign up button and input*/
+#signUp button, input{
+	font-size:1rem;
+	padding:0.3rem;
+	border-radius: 5px;
+}
+
+/*styling the sign up button*/
+#signUp button{
+	border-radius: 6px;
+	background-color:#33CC99;
+	
+}
+
+/*navigation in the footer*/
+#footer_nav ul{
+	padding: 0.2rem 0rem 0rem 0rem;
+	margin-left: 0.5rem;
+	margin-top:0;
+}
+#footer_nav li{
+	list-style: none;
+	margin-bottom: 0.5rem;
+	padding-top: 0.2rem;
+}
+#footer_nav li a{
+	text-decoration: none;
+	color: black;
+	font-size:0.9rem;
+}
+#footer_nav a:hover{
+	text-shadow: 1px 1px 1px green;
+}
+#footer_nav a.active{
+	color:green;
+	font-weight:bold;
+}
+
+/*styling the contact info-adress, email and phone*/
+.contact_row{
+	width: 100%;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	display: block;
+}
+.contact_row:after{
+	display: table;
+	clear:both;
+	content:""
+}
+
+.contact_col_labl{
+	font-size:0.9rem;
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+	float: left;
+	text-align:left;
+	padding:0.2rem;
+}
+
+.contact_col_input{
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+	float:right;
+	
+}
+
+.contact_col_input input {
+	border: none;
+	width: 100%;
+	padding:0.2rem;
+	background-color: inherit;
+	font-size:0.9rem;
+}
+
+/***************Foooter form section******************************/
+
+/*heading of form part*/
+#h4_message{
+	text-align: left;
+}
+
+/*styling the message part*/
+.message_input{
+	width: 100%;
+	float: none;
+	margin: 0;
+}
+
+/*styling the input of footer form*/	
+.message_input input{
+	width: calc(100% - 2*0.5rem);
+	float: none;
+	margin: 0rem 0.5rem;
+	padding:0.5rem;
+	font-size:0.9rem;
+}
+
+/*styling the lable of form elements*/
+.message_label{
+	width: calc(100% - 2*0.5rem);
+	float: none;
+	margin:0.2rem 0.5rem;
+	font-size:0.9rem;
+}
+
+
+
+input.message_info {
+	border: 1px solid gray;
+	background-color:white;
+}
+
+/*textarea container*/
+#message {
+	width: 100%;
+	padding:0;
+	margin:0;
+	font-size:0.9rem;
+}
+/*styling the textarea*/
+#message textarea {
+	font-family: Helvetica;
+	height: 150px;
+	border-radius: 6px;
+	margin: 0rem 0rem 0rem 0.5rem;
+	padding: 0.5rem;
+	width: calc(100% - 2*0.5rem);
+	font-size:0.9rem;
+	resize: none;
+}
+
+/*styling the button in the footer*/
+#send_button{
+	padding: 0.3rem;
+	float:left;
+	font-size: 1rem;
+	margin:0.5rem;
+	border-radius: 6px;
+	background-color: #33CC99;
+}
+/*styling the contaier below footer, for social media and policy*/
+#copyright{
+	height: 100%;
+	background-color: #F6F6F6;
+	padding:0;
+	margin:0;
+	display:flex;
+	flex-wrap:wrap;
+	width: 100%;
+}
+#copyright a{
+	margin:0;
+	text-decoration: none;
+}
+
+/*contaienr of socila media icons*/
+#followInfo li{
+		display: inline-block;
+		margin-right: 0.5rem;
+} 
+
+/*icon for facebook*/
+.fa {
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	padding: 0.4rem 0.3rem;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/*facebook, twitter and instagram icons*/
+.fa-facebook, .fa-twitter, .fa-instagram {
+  background:#33CC99;
+  color: black;
+}
+
+/************************RESPONSIVE FOOTER**************************************************/
+
+@media only screen and (min-width: 400px){
+	#footer_nav, #footer_contact, #footer_form {
+		width:100%;
+	}
+
+	.contact_col_input{
+		width:calc(((100% - 2*0.5rem) / 12) * 12);
+	}
+	.contact_col_labl{
+		width: calc(((100% - 4*0.5rem) / 12) * 3);
+	}
+	.footer_col {
+		float: none;
+		margin-bottom: 1rem;
+	}
+	#designInfo, #privacyInfo, #followInfo{
+		float:none;
+		width: calc(((100% - 2*0.5rem) / 12) * 12);
+		margin: 1rem 0.5rem;
+		text-align: left;
+		padding-top:0.3rem;
+	}
+
+	#followInfo li{
+		list-style:none;
+		display: inline-block;
+		margin-right: 0.5rem;
+		text-align: left;
+	}
+	#followInfo:after{
+		clear:both;
+		display:table;
+		content:"";
+	}
+	#followInfo{
+		list-style:none;
+		padding-left:0;
+	}
+	
+	#followInfo ul{
+		padding:0;
+		margin:0;
+	}
+}
+
+@media only screen and (min-width: 640px){
+	#footer_nav{
+		width: calc(((100% - 4*0.5rem) / 12) * 4);
+	}
+	#footer_contact {
+		width: calc(((100% - 4*0.5rem) / 12) * 8);
+	}
+
+	#footer_form{
+		width: calc(((100% - 2*0.5rem) / 12) * 12);
+	}
+
+	.contact_col_input{
+		min-width:calc(((100% - 4*0.5rem) / 12) * 8);
+	}
+	.contact_col_labl{
+		min-width: calc(((100% - 4*0.5rem) / 12) * 3);
+	}
+	.footer_col {
+		float: left;
+		margin: 0.5rem;
+	}
+	#designInfo, #followInfo{
+		float:left;
+		width: calc(((100% - 6*0.5rem) / 12) * 4);
+		margin: 1rem 0.5rem;
+	}
+	#privacyInfo{
+		float:right;
+		width: calc(((100% - 6*0.5rem) / 12) * 4);
+		margin: 1rem 0.5rem;
+		text-align: right;
+	}
+	#followInfo{
+		text-align: center;
+		padding-top:0;
+	}
+}
+	
+@media only screen and (min-width: 960px){
+	#footer_nav{
+		width: calc(((100% - 6*0.5rem) / 12) * 2);
+	}
+	#footer_contact {
+		width: calc(((100% - 6*0.5rem) / 12) * 5);
+	}
+
+	#footer_form{
+		width: calc(((100% - 6*0.5rem) / 12) * 5);
+	}
+
+	.contact_col_input{
+		min-width:calc(((100% - 4*0.5rem) / 12) * 9);
+	}
+	.contact_col_labl{
+		min-width: calc(((100% - 4*0.5rem) / 12) * 3);
+	}
+	.footer_col {
+		float: left;
+		margin: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 1200px){
+	#footer_nav{
+		width: calc(((100% - 6*0.5rem) / 12) * 2);
+	}
+	#footer_contact {
+		width: calc(((100% - 6*0.5rem) / 12) * 5);
+	}
+
+	#footer_form{
+		width: calc(((100% - 6*0.5rem) / 12) * 5);
+	}
+	.contact_col_input{
+		min-width:calc(((100% - 4*0.5rem) / 12) * 8);
+	}
+	.contact_col_labl{
+		min-width: calc(((100% - 4*0.5rem) / 12) * 2);
+	}
+	.footer_col {
+		float: left;
+		margin: 0.5rem;
+	}
+}
+
+
