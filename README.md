@@ -13,3 +13,11 @@ JavaScript\jQuery
 Work in progress front-end.
 
 Back-end will be included at the end.
+
+## References 
+
+All the images are taken from:
+
+https://www.pexels.com/
+
+https://unsplash.com/
