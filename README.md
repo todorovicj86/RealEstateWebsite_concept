@@ -5,6 +5,10 @@ It includes front-end development.
 
 ## Skills:
 
-HTML\HTML5
-CSS\CSS3
+HTML\HTML5,
+CSS\CSS3,
 JavaScript\jQuery
+
+## Project status
+Work in progress front-end.
+Back-end will be included at the end.
