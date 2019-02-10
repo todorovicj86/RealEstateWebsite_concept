@@ -3,7 +3,7 @@ The project is a Concept of a Real Estate Website.
 
 It includes front-end development.
 
-##Skills:
+## Skills:
 
 HTML\HTML5
 CSS\CSS3
