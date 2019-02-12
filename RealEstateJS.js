@@ -132,7 +132,11 @@ $("#signin").click(function (){
 		$("#LogIn_modal").css("display","none");
 	}
 	// when modal Sign In form is opened, the dropdown menu will collapse
-	$("#TopNavbar").toggleClass("responsive");	
+	$("#TopNavbar").toggleClass("responsive");
+
+	// when modal Sign In form is opened, class open is toggled in #header_container 
+	//(size and padding restored to original values)
+	$("#header_container").toggleClass("open");	
 
 });
 
@@ -145,6 +149,11 @@ $("#login").click(function (){
 
 	//when modal Logn In form is opened, the dropdown menu will collapse
 	$("#TopNavbar").toggleClass("responsive");
+
+	//when modal Logn In form is opened, class open is toggled in #header_container 
+	//(size and padding restored to original values)
+	$("#header_container").toggleClass("open");
+
 
 });
 
