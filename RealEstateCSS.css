@@ -194,7 +194,6 @@ a.icon {
 										HEADER
 *****************************************************************************************************/
 
-
 /*styling the header contaienr*/
 #header_container{
 	background-image: url("images/header.jpg");
@@ -268,7 +267,6 @@ a.icon {
 
 /*styling the container of a modal form*/
 .modalForm_container{
-	z-index: 1;
 	width:100%;
 	height: 100%;
 	background-color: rgb(0,0,0); /* Fallback color */
@@ -277,6 +275,7 @@ a.icon {
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 3;
 }
 
 /*modal form*/
