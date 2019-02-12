@@ -10,6 +10,7 @@ document.getElementById("toggle").onclick = function (){
 	  } else {
 			x.className = "menu";
 	  }
+	  $("#header_container").toggleClass("open");
 }
 
 //adding and removing active class, for active links
