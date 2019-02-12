@@ -46,6 +46,7 @@ body {
 	width: 100%;
 }
 
+
 /*********************************************************************************
 									TOP MENU
 *********************************************************************************/
@@ -60,7 +61,7 @@ body {
 	height:100%;
 	margin:0 auto;
 	position:relative; /*To use z-index, position needs to be set to relative*/
-	z-index:99999;
+	z-index:1;
 }
 
 /*clearing the floats of the menu's children*/
@@ -180,6 +181,11 @@ a.icon {
 		display: block;
 		float:left;
 		margin-left:0;
+	}
+	#header_container.open{
+		padding-top: 350px;
+		height:900px;
+		
 	}
 
 }
