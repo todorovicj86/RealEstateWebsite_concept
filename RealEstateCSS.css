@@ -311,14 +311,22 @@ a.icon {
 
 /*close button*/
 .close {
-  color: black;
-  float: right;
-  font-size: 1.8rem;
-  margin-right: 0.5rem;
-  margin-top:-0.5rem;
+	color: black;
+	float: right;
+	font-size: 1.8rem;
+	margin-right: 0.5rem;
+	margin-top:-0.5rem;
 }
 .close:hover{
 	cursor:pointer;
+}
+
+.modalTitle{
+	float:left;
+	margin-top:0.5rem;
+	margin-left:0.5rem;
+	font-size: 1.3rem;
+	margin-bottom: 0;
 }
 
 /*styling the star-important field to fill in*/
