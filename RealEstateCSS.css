@@ -56,7 +56,7 @@ body {
 }
 /*centering the menu elements*/
 #TopNavbar{
-	width:65%;
+	width:70%;
 	height:100%;
 	margin:0 auto;
 	position:relative; /*To use z-index, position needs to be set to relative*/
@@ -204,7 +204,7 @@ a.icon {
 	vertical-align: center;
 	max-width: 570px;
 	margin: 0 auto;
-	color: #CEE0CB;
+	color: #A5E1C2;
 	/*font-size: 4rem;*/
 	font-weight: normal;
 	font-style: italic;
@@ -338,6 +338,11 @@ a.icon {
 		height: 80vh;
 		padding-top: 70px;
 	}
+
+	.container, #TopNavbar{
+		width:90%;
+	}
+
 	
 }
 @media only screen and (min-width: 600px){
@@ -355,6 +360,10 @@ a.icon {
 	#header_container{
 		height: 600px;
 		padding-top: 90px;
+	}
+
+	.container, #TopNavbar{
+		width:80%;
 	}
 	
 }
@@ -374,6 +383,9 @@ a.icon {
 	#header_container{
 		height: 60vh;
 		padding-top: 90px;
+	}
+	.container, #TopNavbar{
+		width:70%;
 	}
 }
 
@@ -412,6 +424,9 @@ a.icon {
 	#header_container{
 		height: 700px;
 		padding-top: 90px;
+	}
+	.container, #TopNavbar{
+		width:70%;
 	}
 	
 }
