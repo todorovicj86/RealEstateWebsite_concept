@@ -131,16 +131,9 @@ $("#signin").click(function (){
 	if ($('#LogIn_modal').css("display","block")){
 		$("#LogIn_modal").css("display","none");
 	}
+	// when modal Sign In form is opened, the dropdown menu will collapse
+	$("#TopNavbar").toggleClass("responsive");	
 
-/*if($(".menuItem, #buttons").css("display","block")){
-$(".menuItem, #buttons").css("display","none");
-
-$("#TopNavbar").css("z-index", "0");
-} else if($("#SignIn_modal").css("display","none")){
-$(".menuItem, #buttons").css("display","block");
-
-$("#TopNavbar").css("z-index", "1");
-}*/
 });
 
 $("#login").click(function (){
@@ -149,6 +142,9 @@ $("#login").click(function (){
 	if ($('#SignIn_modal').css("display","block")){
 		$("#SignIn_modal").css("display","none");
 	}
+
+	//when modal Logn In form is opened, the dropdown menu will collapse
+	$("#TopNavbar").toggleClass("responsive");
 
 });
 
