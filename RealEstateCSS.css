@@ -783,6 +783,7 @@ a.icon {
 	border-top: 1px dashed gray;
 	display:flex;
 	flex-wrap:wrap;
+	position:relative;
 }
 
 /*defining the width of the 1st child*/
@@ -870,6 +871,23 @@ p.bath_text{
 	width: calc((100% - 4*0.2rem) / 2);
 }
 
+a.details{
+	/*width: 100%;*/
+	/*margin:0% 25% 5% 25%;*/
+	position: absolute;
+	bottom:12%;
+	left:25%;
+	width:50%; 
+
+}
+
+#MoreDetails{
+	background-color:#9FDFBF;
+	border-radius: 6px;
+	font-size: 0.9rem;
+	padding:0.3rem;
+	font-weight: bold;
+}
 /************************Pagination************************************/
 
 /*styling the pagination*/
