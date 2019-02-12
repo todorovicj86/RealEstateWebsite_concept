@@ -26,7 +26,7 @@ $(".menuItem").click(function (){
 
 /***************FILTERING DATA***********************/	
 $(document).ready(function(){
-	
+	$("#noMatchMessage").hide();
 	//adding function when button search is clicked
 	$(".searchButton").click(function(){
 		
@@ -106,13 +106,11 @@ $(document).ready(function(){
 						//console.log(filter);
 						
 						//if filtered array is the same as selected options, then show only those cards/offers
-						if ( filter.toString() == optionList.toString()) {
+						if (filter.toString() == optionList.toString()) {
 							$(this).show();
-						}else {
-							//alert("No match to your criteria! Try again with new filters!");
-							$("#noMatchMessage").html("We are sorry! There is no property with current criteria! Please try again with new selections!");
-							
-						};
+							$("#noMatchMessage").hide();
+						}
+						
 					};
 						
 			}); //end of .mainContent_col.each 
@@ -153,7 +151,6 @@ $("#login").click(function (){
 	//when modal Logn In form is opened, class open is toggled in #header_container 
 	//(size and padding restored to original values)
 	$("#header_container").toggleClass("open");
-
 
 });
 
