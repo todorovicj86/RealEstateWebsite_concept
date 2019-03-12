@@ -801,8 +801,8 @@ a.icon {
 
 /*defining the tooltip for location of the property*/
 .tooltip {
-  position: relative;
-  display: inline-block;
+ 	position: relative;
+ 	display: inline-block;
  }
 
 .tooltip .tooltiptext {
@@ -822,23 +822,22 @@ a.icon {
 	left: 50%;
 	 margin-left: -60px;
 	z-index: 1;
-	
 }
 
 /* Tooltip arrow */
 .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #33CC99 transparent transparent transparent;
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #33CC99 transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+ 	visibility: visible;
 }
 
 
@@ -877,7 +876,6 @@ a.icon {
 .footer_part{
 	float:left;
 	margin: 0.3rem;
-	/*background-color:yellow;*/
 	padding:0 ;
 	display:flex;
 	flex-wrap: wrap;
@@ -901,38 +899,34 @@ a.icon {
 .size{
 	margin:0;
 	width: 40%;
-	/*background-color:gray;*/
 }
 
 /*text of the size*/
 p.size_text{
 	margin:0;
 	width: 60%;
-	/*background-color:gray;*/
 	text-align: left;
 }
 
 /*icon for bedrooms*/
 .bed{
 	margin:0rem 0.2rem 0rem 0.2rem;
-	/*background-color:gray;*/
 	width: calc((100% - 4*0.2rem) / 2);
 }
 
 /*number of bedrooms*/
 p.bed_text{
 	margin:0.3rem 0.2rem 0rem 0.2rem;
-	/*background-color:gray;*/
 	width: calc((100% - 4*0.2rem) / 2);
 }
 
 /*icon for bathroom*/
 .bath{
 	margin:0rem 0.2rem 0rem 0.2rem;
-	/*background-color:gray;*/
 	width: calc((100% - 4*0.2rem) / 2);
 	text-align: right;
 }
+
 /*text for bathroom number*/
 p.bath_text{
 	margin:0.4rem 0.2rem 0rem 0.2rem;
@@ -942,13 +936,10 @@ p.bath_text{
 }
 
 a.details{
-	/*width: 100%;*/
-	/*margin:0% 25% 5% 25%;*/
 	position: absolute;
 	bottom:12%;
 	left:25%;
 	width:50%; 
-
 }
 
 #MoreDetails{
