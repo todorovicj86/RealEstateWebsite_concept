@@ -122,38 +122,22 @@ $(document).ready(function(){
 
 /**************Making Modal Forms***********************/	
 
-//get the button to open the modal form
-$("#signin").click(function (){
-	$("#SignIn_modal").css("display","block");
+$(".btn").on("click", function(){
 	
-	if ($('#LogIn_modal').css("display","block")){
-		$("#LogIn_modal").css("display","none");
-	}
-	// when modal Sign In form is opened, the dropdown menu will collapse
-	$("#TopNavbar").toggleClass("responsive");
-
-	// when modal Sign In form is opened, class open is toggled in #header_container 
-	//(size and padding restored to original values)
-	$("#header_container").toggleClass("open");	
-
-});
-
-$("#login").click(function (){
-	$("#LogIn_modal").css("display","block");
-
-	if ($('#SignIn_modal').css("display","block")){
-		$("#SignIn_modal").css("display","none");
+	if ($(this).is("#signin")){
+		$("#SignIn_modal").css("display","block");
+	
+	} else {
+		$('#LogIn_modal').css("display","block");
 	}
 
-	//when modal Logn In form is opened, the dropdown menu will collapse
-	$("#TopNavbar").toggleClass("responsive");
+		// when modal form is opened, the drop-down menu will collapse
+		$("#TopNavbar").toggleClass("responsive");
 
-	//when modal Logn In form is opened, class open is toggled in #header_container 
-	//(size and padding restored to original values)
-	$("#header_container").toggleClass("open");
-
-});
-
+		// when modal Sign In form is opened, class open is toggled in #header_container 
+		//(size and padding restored to original values)
+		$("#header_container").toggleClass("open");
+})
 
 // Get the <span> element that closes the modal
 $(".close").click(function(){
@@ -180,7 +164,7 @@ for (i = 0; i < z.length; i++) {
 }
 function plusDivs(n, j) {
     //get custom data attribute value of current image index to slideshow class index j
-    slideIndex = parseInt(z[j].getAttribute("data-currentslide")); //parses (rasclanjuje) the string and returns an intiger
+    slideIndex = parseInt(z[j].getAttribute("data-currentslide")); //parses the string and returns an intiger
     showDivs(slideIndex += n, j);
 }
 
