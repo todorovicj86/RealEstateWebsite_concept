@@ -2,16 +2,10 @@
 /***************RESPONSIVE TOP MENU***********************/	
 
 //making the responsive top menu - adding class .responsive
-document.getElementById("toggle").onclick = function (){
-	  var x = document.getElementById("TopNavbar");
-	 
-	  if (x.className === "menu") {
-			x.className += " responsive";
-	  } else {
-			x.className = "menu";
-	  }
-	  $("#header_container").toggleClass("open");
-}
+$("#toggle").on("click", function(){
+	$("#TopNavbar").toggleClass("responsive");
+	$("#header_container").toggleClass("open");
+})
 
 //adding and removing active class, for active links
 $(".menuItem").click(function (){
