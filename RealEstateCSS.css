@@ -158,7 +158,7 @@ a.icon {
 	}
 	a.icon { /*setting toggle icon to be visible once the screen size is 900px and less*/
 		float: right;
-		display: inline-block;
+		display: block;
 	}
 
 	.responsive a.icon {
