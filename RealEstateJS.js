@@ -161,11 +161,10 @@ $(".close").click(function(){
 	$("#LogIn_modal").css("display","none");
 });
 
-// When the user clicks anywhere outside of the modal, close it
-$("#header_container, #main_container, #service_container, #footer_container").click(function(){
-	if ($('#SignIn_modal').css("display","block") || $('#LogIn_modal').css("display","block")) {
-		$("#SignIn_modal").css("display","none");
-		$("#LogIn_modal").css("display","none");
+//close modal form clicking outside the form
+$(".modalForm_container").click(function(event){
+	if(!$(event.target).closest(".modalForm").length && !$(event.target).is(".modalForm")){
+		$(".modalForm_container").hide();
 	}
 });
 
