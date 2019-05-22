@@ -157,8 +157,7 @@ $("#login").click(function (){
 
 // Get the <span> element that closes the modal
 $(".close").click(function(){
-	$("#SignIn_modal").css("display","none");
-	$("#LogIn_modal").css("display","none");
+	$(".modalForm_container").hide();
 });
 
 //close modal form clicking outside the form
