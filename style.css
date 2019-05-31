@@ -724,8 +724,9 @@ a.icon {
 	font-weight: bold;
 }
 /*styling sold possibility*/
-.sold{
-	color:red;
+.rentBuy.sold{
+	color:white;
+	background: #B30000;
 }
 
 /*styling container for defining the property*/
