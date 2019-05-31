@@ -194,7 +194,7 @@ a.icon {
 										HEADER
 *****************************************************************************************************/
 
-/*styling the header contaienr*/
+/*styling the header container*/
 #header_container{
 	background-image: url("images/header.jpg");
 	background-size: cover;
@@ -228,7 +228,7 @@ a.icon {
 	position: absolute;
 	bottom:2%;
 	left: 10%;
-	-wbkit-flex-wrap:wrap;
+	-webkit-flex-wrap:wrap;
 	display:flex;
 	text-align: center;
 	align-items: center;
@@ -296,7 +296,7 @@ a.icon {
 	display: none;
 }
 
-/*stylign of buttons in modal form*/
+/*styling of buttons in modal form*/
 .modalForm_buttons{
 	padding: 0.3rem;
 	font-size: 1rem;
@@ -874,7 +874,7 @@ a.icon {
 	margin-left: 0.8rem;
 }
 
-/*syling of footer columns*/
+/*styling of footer columns*/
 .footer_part{
 	float:left;
 	margin: 0.3rem;
@@ -1067,7 +1067,7 @@ a.details{
 }
 
 /****************************************END OF SIDE NAVIGATION********************************************************/
-/*responisve main and side bar*/
+/*responsive main and side bar*/
 @media only screen and (min-width: 400px){
 	.mainContent_col{
 		width: calc(100% - 2*0.5rem);
@@ -1167,7 +1167,7 @@ a.details{
 												FOOTER
 ************************************************************************************************************/
 
-/*styling the footer contaier*/
+/*styling the footer container*/
 #footer_container{
 	background-color: #CEE0CB;
 	background:radial-gradient(#9fdfbf, #e6ffe6);
@@ -1204,7 +1204,7 @@ a.details{
 	border-radius: 5px;
 }
 
-/*styling the div for the subscritpion */
+/*styling the div for the subscription */
 #subscribe{
 	text-align: center;
 	margin-top: 0.8rem;
@@ -1265,7 +1265,7 @@ a.details{
 	font-weight:bold;
 }
 
-/*styling the contact info-adress, email and phone*/
+/*styling the contact info-address, email and phone*/
 .contact_row{
 	width: 100%;
 	padding-top: 0.5rem;
@@ -1302,7 +1302,7 @@ a.details{
 	font-size:0.9rem;
 }
 
-/***************Foooter form section******************************/
+/***************Footer form section******************************/
 
 /*heading of form part*/
 #h4_message{
@@ -1325,7 +1325,7 @@ a.details{
 	font-size:0.9rem;
 }
 
-/*styling the lable of form elements*/
+/*styling the label of form elements*/
 .message_label{
 	width: calc(100% - 2*0.5rem);
 	float: none;
@@ -1368,7 +1368,7 @@ input.message_info {
 	border-radius: 6px;
 	background-color: #33CC99;
 }
-/*styling the contaier below footer, for social media and policy*/
+/*styling the container below footer, for social media and policy*/
 #copyright{
 	height: 100%;
 	background-color: #F6F6F6;
@@ -1383,7 +1383,7 @@ input.message_info {
 	text-decoration: none;
 }
 
-/*contaienr of socila media icons*/
+/*container of social media icons*/
 #followInfo li{
 		display: inline-block;
 		margin-right: 0.5rem;
