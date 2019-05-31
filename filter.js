@@ -165,7 +165,7 @@ $(document).ready(function(){
             // else, hide the message
             $("#noMatchMessage").addClass("hide");
         }
-        // syncDropdown();
+      
     });
 
 // resetting the search option to an initial state
