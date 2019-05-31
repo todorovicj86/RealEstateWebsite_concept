@@ -62,7 +62,7 @@ for (i = 0; i < z.length; i++) {
 }
 function plusDivs(n, j) {
     //get custom data attribute value of current image index to slideshow class index j
-    slideIndex = parseInt(z[j].getAttribute("data-currentslide")); //parses the string and returns an intiger
+    slideIndex = parseInt(z[j].getAttribute("data-currentslide")); //parses the string and returns an integer
     showDivs(slideIndex += n, j);
 }
 
