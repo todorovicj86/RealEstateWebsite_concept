@@ -448,7 +448,7 @@ a.icon {
 										SERVICES
 *****************************************************************************************/
 
-/*styling the conatiner for service content*/
+/*styling the container for service content*/
 #service_container{
 	display: flex;
 	flex-wrap: wrap;
@@ -471,7 +471,6 @@ a.icon {
 	margin-bottom:0;
 }
 
-/
 #service_heading p{
 	font-style: italic;
 	color: gray;
@@ -486,14 +485,14 @@ a.icon {
 	margin-bottom: 1rem;
 }
 
-/*styling the srevice's images*/
+/*styling the service's images*/
 .service_img{
 	height: 150px;
 	width: 150px;
 	margin: 0.5rem;
 }
 
-/*styling the advertisment image*/
+/*styling the advertisement image*/
 #advert_img{
 	border-radius: 50%;
 	padding: 0.2rem;
@@ -569,6 +568,9 @@ a.icon {
 	justify-content: center;
 }
 
+.hide {
+	display: none;
+}
 /*****************************************MAIN CONTENT START********************************************************/
 /*styling the main content*/
 #mainContent{
@@ -1000,7 +1002,7 @@ a.details{
 
 
 /*styling the columns/cards of the side navigation*/
-.mainContent_col_side{
+.mainContent_col_side {
 	width: calc(100% - 2*0.5rem);
 	height: 100%;
 	border-radius: 6px;
@@ -1011,14 +1013,19 @@ a.details{
 
 /*styling the button in the side navigation*/
 .mainContent_col_side button{
-	padding: 0.3rem;
+	padding: 0.5rem;
 	font-size: 1rem;
 	border-radius: 6px;
-	background-color: #33CC99;
 	float: right;
 	color:black;
+	box-shadow: 1px 1px 2px gray;
 }
 
+.mainContent_col_side .searchButton {
+	background-color: #33CC99;
+	width: 80px;
+	border: none;
+}
 
 /*styling the select options in the side navigation*/
 .mainContent_col_side select{
@@ -1039,8 +1046,8 @@ a.details{
 	font-weight: bold;
 }
 .limit_input{
-	display: inline-block;
-	float:left;
+	display: block;
+	float: left;
 	width: calc((100% - 2*0.5rem) / 2);
 	margin-bottom: 0.5rem;
 	font-size:0.9rem;
@@ -1051,6 +1058,14 @@ a.details{
 #price_max, #size_max{
 	margin-left: 0.5rem;
 }
+
+.resetButton {
+	background-color: none;
+	border: 1px solid #33CC99;
+	width: 80px;
+	margin-right: 10px;
+}
+
 /****************************************END OF SIDE NAVIGATION********************************************************/
 /*responisve main and side bar*/
 @media only screen and (min-width: 400px){
