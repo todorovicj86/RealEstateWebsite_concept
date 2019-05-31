@@ -181,8 +181,8 @@
 					
 					<select class="property">
 						<option value="">Property</option>
-						<option value="apart">Apartment</option>
-						<option value="house">House</option>
+						<option class="apart" value="apart">Apartment</option>
+						<option class="house" value="house">House</option>
 					</select>
 					<select class="structure">
 						<option value="">Structure</option>
@@ -257,7 +257,7 @@
 					
 					<!--Advertising part-->
 					<div class="column" id="advert">
-						<img src="images\Advertise.jpg" class="service_img" id="advert_img">
+						<img src="images\ForAdvert.jpg" class="service_img" id="advert_img">
 						<h2>Advertise</h2>
 						<p>
 							Lorem ipsum dolor sit amet, te vis causae petentium salutandi, 
@@ -292,11 +292,11 @@
 						<h1>OUR OFFERS</h1>
 						
 						<div class="row">
-							<h3 id="noMatchMessage">We are sorry! There is no property with current criteria! Please try again with new selections!"</h3>
+							<h3 id="noMatchMessage" class="hide">We are sorry! There is no property with current criteria! Please try again with new selections!"</h3>
 						</div>
 
 						<div class="row">
-							<div class="mainContent_col" data-tag="rent apart 2_br loc1 equip_yes 52 350" id="code_1">
+							<div class="mainContent_col" id="code_1">
 								
 								<div class="card_header">
 									
@@ -386,7 +386,7 @@
 				
 							</div>
 							
-							<div class="mainContent_col" data-tag = "buy house 1_br loc2 equip_no 30 35000" id="code_2">
+							<div class="mainContent_col" id="code_2">
 								<div class="card_header">
 								
 									<div class="image_container" id="2ndSlideshow">
@@ -431,7 +431,7 @@
 									<div class="card_part">
 										<p class="locIcon tooltip">
 											<img class="icons" src="images\location.png">
-											<span class="tooltiptext">Location 2</span>
+											<span class="tooltiptext">Location 3</span>
 										</p>
 									</div>
 									<div class="card_part">
@@ -450,7 +450,7 @@
 										<p class="bed">
 											<img class="icons" src="images\bedIcon.png">
 										</p>
-										<p class="bed_text">1</p>
+										<p class="bed_text">stud</p>
 									
 									</div>
 									
@@ -467,7 +467,7 @@
 								</div>
 							</div>
 							
-							<div class="mainContent_col" data-tag = "buy apart 3_br loc3 equip_yes 70 80000" id="code_3">
+							<div class="mainContent_col" id="code_3">
 								<div class="card_header">
 									
 										<img class="card_img" src="images\livingroom\apartment-architecture-bedroom-210552.jpg">
@@ -532,7 +532,7 @@
 							</div>
 						
 						
-							<div class="mainContent_col" data-tag = "rent house 3_br loc2 equip_no 100 400" id="code_4">
+							<div class="mainContent_col" id="code_4">
 								<div class="card_header">
 									
 									<img class="card_img" src="images\livingroom\apartment-architecture-bedroom-210552.jpg">
@@ -555,16 +555,16 @@
 								
 								<div class="card_middle">
 									<div class="card_part">
-										<p class="price">400 &euro;</p>
+										<p class="price">650 &euro;</p>
 									</div>
 									<div class="card_part">
 										<p class="locIcon tooltip">
 											<img class="icons" src="images\location.png">
-											<span class="tooltiptext">Location 2</span>
+											<span class="tooltiptext">Location 5</span>
 										</p>
 									</div>
 									<div class="card_part">
-										<p class="equipped">Unequipped</p>
+										<p class="equipped">Equipped</p>
 									</div>
 								</div>
 								
@@ -579,7 +579,7 @@
 										<p class="bed">
 											<img class="icons" src="images\bedIcon.png">
 										</p>
-										<p class="bed_text">3</p>
+										<p class="bed_text">4</p>
 									
 									</div>
 									
@@ -596,10 +596,10 @@
 								</div>
 							</div>
 							
-							<div class="mainContent_col" data-tag = "rent apart 3_br loc4 equip_yes 72 450" id="code_5">
+							<div class="mainContent_col" id="code_5">
 								<div class="card_header">
 									
-									<img class="card_img" src="images\livingroom\1-wtc-backsplash-cabinets-1439710.jpg">
+									<img class="card_img" src="images\livingroom\furnitures-house-living-room-77931.jpg">
 									
 									<!--Save and share options-->
 									<div class="saveShare">
@@ -648,7 +648,7 @@
 										<p class="bed">
 											<img class="icons" src="images\bedIcon.png">
 										</p>
-										<p class="bed_text">3</p>
+										<p class="bed_text">2</p>
 									
 									</div>
 									
@@ -666,10 +666,10 @@
 								</div>
 							</div>
 
-							<div class="mainContent_col" data-tag = "rent apart 3_br loc4 equip_yes 72 450" id="code_5">
+							<div class="mainContent_col" id="code_6">
 								<div class="card_header">
 									
-									<img class="card_img" src="images\livingroom\1-wtc-backsplash-cabinets-1439710.jpg">
+									<img class="card_img" src="images\livingroom\apartment-architecture-carpet-584399.jpg">
 									
 									<!--Save and share options-->
 									<div class="saveShare">
@@ -692,7 +692,7 @@
 								<div class="card_middle">
 									
 									<div class="card_part">
-										<p class="price">450 &euro;</p>
+										<p class="price">100 &euro;</p>
 									</div>
 									<div class="card_part">
 										<p class="locIcon tooltip">
@@ -710,7 +710,7 @@
 									
 									<div class="footer_part">
 										<p class="size"><img class="icons" src="images\1600.png"></p>
-										<p class="size_text">72 m<sup>2</p>
+										<p class="size_text">30 m<sup>2</p>
 									</div>
 									
 									<div class="footer_part">
@@ -718,7 +718,7 @@
 										<p class="bed">
 											<img class="icons" src="images\bedIcon.png">
 										</p>
-										<p class="bed_text">3</p>
+										<p class="bed_text">stud</p>
 									
 									</div>
 									
@@ -736,10 +736,10 @@
 								</div>
 							</div>
 
-							<div class="mainContent_col" data-tag = "rent apart 3_br loc4 equip_yes 72 450" id="code_5">
+							<div class="mainContent_col" id="code_7">
 								<div class="card_header">
 									
-									<img class="card_img" src="images\livingroom\1-wtc-backsplash-cabinets-1439710.jpg">
+									<img class="card_img" src="images\livingroom\chastity-cortijo-604616-unsplash.jpg">
 									
 									<!--Save and share options-->
 									<div class="saveShare">
@@ -762,12 +762,81 @@
 								<div class="card_middle">
 									
 									<div class="card_part">
-										<p class="price">450 &euro;</p>
+										<p class="price">650 &euro;</p>
 									</div>
 									<div class="card_part">
 										<p class="locIcon tooltip">
 											<img class="icons" src="images\location.png">
-											<span class="tooltiptext">Location 4</span>
+											<span class="tooltiptext">Location 5</span>
+										</p>
+									</div>
+									<div class="card_part">
+										<p class="equipped">Unequipped</p>
+									</div>
+									
+								</div>
+								
+								<div class="card_footer">
+									
+									<div class="footer_part">
+										<p class="size"><img class="icons" src="images\1600.png"></p>
+										<p class="size_text">100 m<sup>2</p>
+									</div>
+									
+									<div class="footer_part">
+										
+										<p class="bed">
+											<img class="icons" src="images\bedIcon.png">
+										</p>
+										<p class="bed_text">4</p>
+									
+									</div>
+									
+									<div class="footer_part">
+										<p class="bath">
+											<img class="icons" src="images\bathIcon.png">
+										</p>
+										<p class="bath_text">2</p>
+									</div>
+
+									<div class="footer_part">
+										<a href="#" class="details"><button id="MoreDetails">More details</button></a>
+									</div>
+								
+								</div>
+							</div>
+							<div class="mainContent_col" id="code_8">
+								<div class="card_header">
+									
+									<img class="card_img" src="images\livingroom\chastity-cortijo-604616-unsplash.jpg">
+									
+									<!--Save and share options-->
+									<div class="saveShare">
+										<img class="icons heart" src="images\fullHeart.png">
+										<img class="icons share" src="images\kisspng-share.png">
+									</div>
+									
+									<!--For Rent or for sale options-->
+									<div class="rentBuy">
+										<p class="forRent">FOR RENT</p>
+									</div>
+									
+									<div class="prop_div">
+										<p class="prop">House</p>
+									</div>
+									
+								</div>
+								
+								
+								<div class="card_middle">
+									
+									<div class="card_part">
+										<p class="price">120 &euro;</p>
+									</div>
+									<div class="card_part">
+										<p class="locIcon tooltip">
+											<img class="icons" src="images\location.png">
+											<span class="tooltiptext">Location 2</span>
 										</p>
 									</div>
 									<div class="card_part">
@@ -780,7 +849,7 @@
 									
 									<div class="footer_part">
 										<p class="size"><img class="icons" src="images\1600.png"></p>
-										<p class="size_text">72 m<sup>2</p>
+										<p class="size_text">36 m<sup>2</p>
 									</div>
 									
 									<div class="footer_part">
@@ -788,7 +857,7 @@
 										<p class="bed">
 											<img class="icons" src="images\bedIcon.png">
 										</p>
-										<p class="bed_text">3</p>
+										<p class="bed_text">1</p>
 									
 									</div>
 									
@@ -797,6 +866,216 @@
 											<img class="icons" src="images\bathIcon.png">
 										</p>
 										<p class="bath_text">1</p>
+									</div>
+
+									<div class="footer_part">
+										<a href="#" class="details"><button id="MoreDetails">More details</button></a>
+									</div>
+								
+								</div>
+							</div>
+
+							<div class="mainContent_col" id="code_9">
+								<div class="card_header">
+									
+									<img class="card_img" src="images\livingroom\chastity-cortijo-604616-unsplash.jpg">
+									
+									<!--Save and share options-->
+									<div class="saveShare">
+										<img class="icons heart" src="images\fullHeart.png">
+										<img class="icons share" src="images\kisspng-share.png">
+									</div>
+									
+									<!--For Rent or for sale options-->
+									<div class="rentBuy">
+										<p class="forRent">FOR SALE</p>
+									</div>
+									
+									<div class="prop_div">
+										<p class="prop">House</p>
+									</div>
+									
+								</div>
+								
+								
+								<div class="card_middle">
+									
+									<div class="card_part">
+										<p class="price">50000 &euro;</p>
+									</div>
+									<div class="card_part">
+										<p class="locIcon tooltip">
+											<img class="icons" src="images\location.png">
+											<span class="tooltiptext">Location 1</span>
+										</p>
+									</div>
+									<div class="card_part">
+										<p class="equipped">Unequipped</p>
+									</div>
+									
+								</div>
+								
+								<div class="card_footer">
+									
+									<div class="footer_part">
+										<p class="size"><img class="icons" src="images\1600.png"></p>
+										<p class="size_text">120 m<sup>2</p>
+									</div>
+									
+									<div class="footer_part">
+										
+										<p class="bed">
+											<img class="icons" src="images\bedIcon.png">
+										</p>
+										<p class="bed_text">2</p>
+									
+									</div>
+									
+									<div class="footer_part">
+										<p class="bath">
+											<img class="icons" src="images\bathIcon.png">
+										</p>
+										<p class="bath_text">1</p>
+									</div>
+
+									<div class="footer_part">
+										<a href="#" class="details"><button id="MoreDetails">More details</button></a>
+									</div>
+								
+								</div>
+							</div>
+
+							<div class="mainContent_col" id="code_10">
+								<div class="card_header">
+									
+									<img class="card_img" src="images\livingroom\chastity-cortijo-604616-unsplash.jpg">
+									
+									<!--Save and share options-->
+									<div class="saveShare">
+										<img class="icons heart" src="images\fullHeart.png">
+										<img class="icons share" src="images\kisspng-share.png">
+									</div>
+									
+									<!--For Rent or for sale options-->
+									<div class="rentBuy">
+										<p class="forRent">FOR SALE</p>
+									</div>
+									
+									<div class="prop_div">
+										<p class="prop">Apartment</p>
+									</div>
+									
+								</div>
+								
+								
+								<div class="card_middle">
+									
+									<div class="card_part">
+										<p class="price">30000 &euro;</p>
+									</div>
+									<div class="card_part">
+										<p class="locIcon tooltip">
+											<img class="icons" src="images\location.png">
+											<span class="tooltiptext">Location 2</span>
+										</p>
+									</div>
+									<div class="card_part">
+										<p class="equipped">Unequipped</p>
+									</div>
+									
+								</div>
+								
+								<div class="card_footer">
+									
+									<div class="footer_part">
+										<p class="size"><img class="icons" src="images\1600.png"></p>
+										<p class="size_text">26 m<sup>2</p>
+									</div>
+									
+									<div class="footer_part">
+										
+										<p class="bed">
+											<img class="icons" src="images\bedIcon.png">
+										</p>
+										<p class="bed_text">1</p>
+									
+									</div>
+									
+									<div class="footer_part">
+										<p class="bath">
+											<img class="icons" src="images\bathIcon.png">
+										</p>
+										<p class="bath_text">1</p>
+									</div>
+
+									<div class="footer_part">
+										<a href="#" class="details"><button id="MoreDetails">More details</button></a>
+									</div>
+								
+								</div>
+							</div>
+
+							<div class="mainContent_col" id="code_11">
+								<div class="card_header">
+									
+									<img class="card_img" src="images\livingroom\chastity-cortijo-604616-unsplash.jpg">
+									
+									<!--Save and share options-->
+									<div class="saveShare">
+										<img class="icons heart" src="images\fullHeart.png">
+										<img class="icons share" src="images\kisspng-share.png">
+									</div>
+									
+									<!--For Rent or for sale options-->
+									<div class="rentBuy">
+										<p class="forRent">FOR SALE</p>
+									</div>
+									
+									<div class="prop_div">
+										<p class="prop">House</p>
+									</div>
+									
+								</div>
+								
+								
+								<div class="card_middle">
+									
+									<div class="card_part">
+										<p class="price">75000 &euro;</p>
+									</div>
+									<div class="card_part">
+										<p class="locIcon tooltip">
+											<img class="icons" src="images\location.png">
+											<span class="tooltiptext">Location 4</span>
+										</p>
+									</div>
+									<div class="card_part">
+										<p class="equipped">Unequipped</p>
+									</div>
+									
+								</div>
+								
+								<div class="card_footer">
+									
+									<div class="footer_part">
+										<p class="size"><img class="icons" src="images\1600.png"></p>
+										<p class="size_text">200 m<sup>2</p>
+									</div>
+									
+									<div class="footer_part">
+										
+										<p class="bed">
+											<img class="icons" src="images\bedIcon.png">
+										</p>
+										<p class="bed_text">4</p>
+									
+									</div>
+									
+									<div class="footer_part">
+										<p class="bath">
+											<img class="icons" src="images\bathIcon.png">
+										</p>
+										<p class="bath_text">2</p>
 									</div>
 
 									<div class="footer_part">
@@ -824,7 +1103,7 @@
 					
 					
 					<div id="main_sidebar">
-						<div class="mainContent_col_side">
+						<div class="mainContent_col_side" id="quickSideNavbar">
 							<h2>NAVIGATION</h2>
 							<p>Search properties according to the desired criteria.</p>
 							<select class="rent_buy">
@@ -877,6 +1156,8 @@
 							</div>
 
 							<button type="submit" class="searchButton">Search</button>
+							<button type="submit" class="resetButton">Reset</button>
+							
 							
 						</div><!--End of .mainContent_col_side-->
 					
@@ -1013,11 +1294,9 @@
 
 
 <!-----------------------------------------------JavaScript---------------------------------------------------------------------------------->
-		
-		<script type="text/javascript" src="index.js"></script> 
 		<script type="text/javascript" src="filter.js"></script> 
+		<script type="text/javascript" src="index.js"></script> 
 	
-
 	</body><!--End of body-->
 
 </html><!--End of html-->
