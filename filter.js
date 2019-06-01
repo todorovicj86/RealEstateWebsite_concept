@@ -178,14 +178,10 @@ $(".resetButton").click(function(){
     $("#noMatchMessage").addClass("hide");
 
     // sets all the selected values to the first option  - value = ""
-    $("#quickSideNavbar select").each(function(){
+    $("#quickSideNavbar select, .limit_input").each(function(){
        $(this).val("");
     });
      
-     // reset input fields
-     $(".limit_input").each(function(){
-        $(this).val("");
-     });
 
 })
 
