@@ -11,7 +11,6 @@ JavaScript\jQuery
 
 ## Project status
 Work in progress front-end.
-The back-end will maybe be included at the end.
 
 ## References 
 All the images are taken from:
