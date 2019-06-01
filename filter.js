@@ -178,7 +178,11 @@ $(".resetButton").click(function(){
     $("#quickSideNavbar select").each(function(){
        $(this).val("");
     });
-       
+     
+     // reset input fields
+     $(".limit_input").each(function(){
+        $(this).val("");
+     });
 
 })
 
