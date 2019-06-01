@@ -174,6 +174,9 @@ $(".resetButton").click(function(){
     // when click on button, show all properties
     $(".mainContent_col").show();
 
+    // hide the message
+    $("#noMatchMessage").addClass("hide");
+
     // sets all the selected values to the first option  - value = ""
     $("#quickSideNavbar select").each(function(){
        $(this).val("");
